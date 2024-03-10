@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_img"
+    tools:context=".OnboardingActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="110sp"
+        android:layout_height="110sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_with_name" />
+
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32sp"
+        android:text="@string/skip"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/slideViewPager"
+        android:layout_width="409sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/skip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32sp"
+        android:layout_marginBottom="32sp"
+        android:background="@drawable/search_button_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/back_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
