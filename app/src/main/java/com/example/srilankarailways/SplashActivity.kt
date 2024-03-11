@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.myLooper()!!).postDelayed({
-            startActivity(Intent(this, SignSelectActivity::class.java))
+            startActivity(Intent(this, OnboardingActivity::class.java))
             finish()
         }, SPLASH_SCREEN_TIME)
     }

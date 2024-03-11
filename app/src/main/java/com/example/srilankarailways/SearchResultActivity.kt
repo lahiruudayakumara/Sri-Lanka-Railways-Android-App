@@ -3,31 +3,24 @@ package com.example.srilankarailways
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class OnboardingActivity : AppCompatActivity() {
+class SearchResultActivity : AppCompatActivity() {
 
-    private lateinit var skip : TextView
-    private lateinit var nextBtn : ImageButton
+    private lateinit var backBtn : ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_onboarding)
+        setContentView(R.layout.activity_search_result)
 
-        skip = findViewById(R.id.skip)
-        nextBtn = findViewById(R.id.nextbtn)
+        backBtn = findViewById(R.id.backBtn)
 
-        nextBtn.setOnClickListener {
-            val intent = Intent(this, OnboardingActivity2::class.java)
-            startActivity(intent)
-        }
-
-        skip.setOnClickListener {
-            val intent = Intent(this, SignSelectActivity::class.java)
+        backBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 

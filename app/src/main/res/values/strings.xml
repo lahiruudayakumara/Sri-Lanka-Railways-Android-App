@@ -27,8 +27,13 @@
     <string name="railway_department">Sri Lanka Railway Department</string>
     <string name="web_link">www.railway.gov.lk</string>
     <string name="about_app">About App</string>
-    <string name="about_description"><![CDATA[Sri Lanka Railways ( SLR ) is a government department functioning under the Ministry of Transport. It is a major transport service provider and is the only rail transport organization in the country. SLR transports both passenger and freight. At its inception, railway was carrying more freight than passenger. But today, it is passenger oriented. SLR’s market share for passenger transport is about 6.0 % and about 0.7 % for goods transport.]]></string>
-    <string name="about_app_description">This railway app is superb, offering seamless functionality and convenience for travelers. With its intuitive interface and efficient features, navigating train schedules, booking tickets, and managing trips has never been easier. Highly recommended for anyone looking for a smooth and stress-free railway experience</string>
+    <string name="about_description"><![CDATA[Sri Lanka Railways ( SLR ) is a government department functioning under the Ministry of Transport.
+     It is a major transport service provider and is the only rail transport organization in the country. SLR transports both passenger and freight.
+     At its inception, railway was carrying more freight than passenger. But today, it is passenger oriented.
+     SLR’s market share for passenger transport is about 6.0 % and about 0.7 % for goods transport.]]></string>
+    <string name="about_app_description">This railway app is superb, offering seamless functionality and convenience for travelers.
+        With its intuitive interface and efficient features, navigating train schedules, booking tickets, and managing trips has never been easier.
+        Highly recommended for anyone looking for a smooth and stress-free railway experience</string>
     <string name="skip">Skip</string>
     <string name="sign_up">Sign Up</string>
     <string name="if_you_have_account">If you have account?</string>
@@ -84,4 +89,25 @@
     <string name="password">Password</string>
     <string name="if_you_havent_account">If you haven\'t account</string>
     <string name="name">Name</string>
+    <string name="templeoftooh">Temple of the tooh</string>
+    <string name="kandystation">Kandy Railway Station</string>
+    <string name="kandyNo">+94111458749</string>
+    <string name="tempOfToothDescription"><![CDATA[The Temple of the Sacred Tooth Relic, or Sri Dalada Maligawa is a Buddhist temple in Kandy, Sri Lanka.
+    It is located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha.
+    Since ancient times, the relic has played an important role in local politics because it is believed that whoever holds the relic holds the governance of the country.
+    The relic was historically held by Sinhalese kings. The temple of the tooth is a World Heritage Site mainly due to the temple and the relic.]]></string>
+    <string name="onboard_description1">"Efficient railway app for seamless travel: book tickets, check schedules. "</string>
+    <string name="onboard1_title">Railways App</string>
+    <string name="onboarding2_title">Discover Routes</string>
+    <string name="onboard_description2">Explore diverse routes effortlessly. Find scenic journeys and discover new destinations with our interactive route map.</string>
+    <string name="onboard_description3">Stay informed with real-time updates. Get alerts on train schedules, delays, and platform changes instantly.</string>
+    <string name="onboard3_title">Stay Updated</string>
+    <string name="sigiriya">Sigiriya</string>
+    <string name="lorem_short"><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry.]]></string>
+    <string name="viewDetails">View Details</string>
+    <string name="complains">Complain</string>
+    <string name="complainhead">Submit Your Complaint</string>
+    <string name="notification">Notification</string>
+    <string name="alertMsgNoftify">5 Notifications recived today</string>
+    <string name="stayUpdated">Stay Updated</string>
 </resources>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/box_outline"
+    android:background="@color/back_gray"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,12 +18,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/btn_open_drawer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16sp"
             android:layout_marginTop="24sp"
             android:background="@color/primary"
+            android:onClick="openDrawer"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/nav" />
@@ -297,6 +298,7 @@
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/complainConstrain"
                         android:layout_width="80sp"
                         android:layout_height="80sp"
                         android:layout_gravity="center">
@@ -330,9 +332,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="237dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16sp"
-                android:layout_marginTop="8sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginEnd="16sp"
                 android:background="@drawable/oval_box_background">
 
@@ -375,6 +377,7 @@
                         android:id="@+id/toSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="50sp"
+                        tools:ignore="MissingConstraints"
                         tools:layout_editor_absoluteX="16dp" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -383,9 +386,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="32dp"
+                    android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toTopOf="@+id/searchTrainBtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -393,37 +396,63 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/constraintLayout6"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/oval_box_background"
                         app:layout_constraintEnd_toEndOf="parent"
-                        tools:ignore="MissingConstraints"/>
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout7"
+                        tools:ignore="MissingConstraints">
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/spinner"
+                            app:srcCompat="@drawable/calender_icon" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/constraintLayout7"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/oval_box_background"
                         app:layout_constraintEnd_toStartOf="@+id/constraintLayout6"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout8"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
                             android:id="@+id/imageView8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/train_icon" />
+                            app:srcCompat="@drawable/train_icon"
+                            tools:ignore="MissingConstraints" />
 
                         <Spinner
                             android:id="@+id/spinner2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            app:layout_constraintStart_toEndOf="@+id/imageView8" />
+                            app:layout_constraintStart_toEndOf="@+id/imageView8"
+                            tools:ignore="MissingConstraints" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/constraintLayout8"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/oval_box_background"
                         app:layout_constraintEnd_toStartOf="@+id/constraintLayout7"
+                        app:layout_constraintStart_toStartOf="parent"
                         tools:ignore="MissingConstraints">
 
                         <ImageView
@@ -436,6 +465,7 @@
                             android:id="@+id/spinner3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/imageView9" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -476,9 +506,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32sp">
 
                 <TextView
                     android:id="@+id/textView8"
@@ -501,12 +532,114 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/mainRecycleView"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/d1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/oval_box_background"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                    <ImageView
+                        android:id="@+id/placeHolderImg1"
+                        android:layout_width="150sp"
+                        android:layout_height="100sp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/sigiriya"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/viewMoreBtn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:background="@drawable/view_more_btn_background"
+                        android:text="View More"
+                        android:textColor="@color/back_gray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/destinationTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/sigiriya"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/placeHolderImg1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/destinationDescription1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/lorem_short"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/viewMoreBtn1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/placeHolderImg1"
+                        app:layout_constraintTop_toBottomOf="@+id/destinationTitle1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/d2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/oval_box_background"
+                    app:layout_constraintTop_toBottomOf="@+id/d1">
+
+                    <ImageView
+                        android:id="@+id/placeHolderImg2"
+                        android:layout_width="150sp"
+                        android:layout_height="100sp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/temple_of_the_tooh"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/viewMoreBtn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:background="@drawable/view_more_btn_background"
+                        android:text="View More"
+                        android:textColor="@color/back_gray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/destinationTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/templeoftooh"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/placeHolderImg2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/destinationDescription2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/lorem_short"
+                        app:layout_constraintBottom_toTopOf="@+id/viewMoreBtn2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/placeHolderImg2"
+                        app:layout_constraintTop_toBottomOf="@+id/destinationTitle2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
