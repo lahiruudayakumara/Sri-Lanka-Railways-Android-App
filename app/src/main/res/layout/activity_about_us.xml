@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back_gray"
     tools:context=".AboutUsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/backBtn"
             android:layout_width="30sp"
             android:layout_height="30sp"
             android:layout_marginStart="16dp"
